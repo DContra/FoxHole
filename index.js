@@ -15,7 +15,7 @@ setInterval(()=>{
 function connectToDB() {
     db = new sqlite3.Database('./ask-bid.db', (err) => {
         if (err) return console.error(err.message)
-        console.log('Successfully connected to in-memory SQL database')
+        console.log('Successfully connected to SQL database')
     })
 
     db.serialize(function () {
