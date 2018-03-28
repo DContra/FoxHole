@@ -33,8 +33,8 @@ function getTable() {
         db.run(`INSERT into kraken (timestamp, ask, bid) VALUES ("${res.timestamp}", "${escape(JSON.stringify(res.asks))}", "${escape(JSON.stringify(res.bids))}")`, (err) =>{
             if(err) console.log('Error writing to Kraken Table')
             console.log('Added entry to kraken table')
-        }).catch(e=>{
-            console.error(e)
         })
+    }).catch(e =>{
+        console.error(e)
     })
 }
